@@ -13,5 +13,7 @@ void main() {
   // persona.edad = 23;
   // persona.bio = 'Nació por ahí';
 
-  print(persona);
+  persona.bio = 'Cambié el valor.';
+
+  print(persona.bio);
 }
