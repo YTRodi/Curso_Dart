@@ -1,7 +1,7 @@
 class Persona {
   // Campos o props
-  String nombre;
-  int edad;
+  String? nombre;
+  int? edad;
   // Propiedad privada con el "_" por delante
   String _bio = 'Hola, soy una prop privada';
 
@@ -28,6 +28,21 @@ class Persona {
   // ===== nombre es posicional
   // Persona(this.edad, {this.nombre = 'Default'});
   Persona({this.edad = 99, this.nombre = 'Default'});
+
+  //? Sobrecarga de constructores (constructores con nombre):
+  Persona.persona30(this.nombre) {
+    this.edad = 30;
+  }
+
+  Persona.persona40(String nombre) {
+    this.nombre = nombre;
+  }
+
+  Persona.nombrePorDefecto(this.edad) {
+    this.nombre = 'Pepito';
+  }
+
+  Persona.argumentosPorDefecto({this.edad = 101, this.nombre = 'Default name'});
 
   // Métodos
   @override
